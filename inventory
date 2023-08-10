@@ -1,0 +1,13 @@
+[debian]
+10.134.27.81
+
+#Children übergibt alle inventory gruppen
+[python3_hosts:children]
+debian
+
+[linux:children]
+debian
+
+#Definiert Variablen für die Gruppe python3. Wird benötigt da sich in Python3 der Pfad geändert hat!?
+[python3_hosts:vars]
+ansible_python_interpreter=/usr/bin/python3

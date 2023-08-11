@@ -34,6 +34,13 @@
   #      state: latest
   #      disable_gpg_check: yes
   #    when: ansible_distribution == 'openSUSE Leap'
+
+    - name: Apply all available patches
+      community.general.zypper:
+        name: '*'
+        state: latest
+        type: patch
+      when: ansible_distribution == 'openSUSE Leap'
     
 
     - name: "Check if reboot needed on Debian"

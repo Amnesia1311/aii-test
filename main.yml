@@ -13,7 +13,7 @@
         update_cache: yes
       when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
       
-- hosts: linux
+- hosts: Linux
   become: true
   tasks:
 

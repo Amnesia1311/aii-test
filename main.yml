@@ -28,12 +28,12 @@
         state: latest
       when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
 
-    - name: "Upgrade SLES Distribuntion"
-      zypper:
-        name: '*'
-        state: latest
-        disable_gpg_check: yes
-      when: ansible_distribution == 'openSUSE Leap'
+  #  - name: "Upgrade SLES Distribuntion"
+  #    zypper:
+  #      name: '*'
+  #      state: latest
+  #      disable_gpg_check: yes
+  #    when: ansible_distribution == 'openSUSE Leap'
     
 
     - name: "Check if reboot needed on Debian"
